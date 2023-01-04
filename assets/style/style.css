@@ -1,5 +1,5 @@
 :root{
-    --light-color: #f1f1f1;
+    --light-color: #fff;
     --dark-color: #000000;
     --secondary-color: #00163f;
     --primary-color: #aa4465;
@@ -14,41 +14,50 @@
     list-style-type: none;
 }
 
+@font-face {
+    font-family: "DancingScript";
+    src: url(../font/DancingScript-Regular.ttf);
+}
+@font-face {
+    font-family: "ElMessiri";
+    src: url(../font/ElMessiri-Regular.ttf);
+}
+
 body{
     width: 100vw;
     height: 100vh;
     padding: 20px;
-    background-size: cover;
+    background:var(--light-color)
 }
 
 main{
     width: 100%;
     height: 100%;
-    border: solid 1px var(--secondary-color);
     padding: 20px;
+    border: solid 1px var(--secondary-color);
     display: flex;
     flex-direction: column;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 2rem;font-family: DancingScript;
+}
+
+p{
+    font-family: ElMessiri;
 }
 
 nav{
-    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 20px;
+    justify-self: flex-end;
 }
 
-button{
-    border: none;
-    background: none;
-}
-
-button a span{
+a{
     color: var(--dark-color);
-    font-size: 8rem;
+    font-size: 10rem;
+    font-family: DancingScript;
 }
