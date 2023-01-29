@@ -40,7 +40,7 @@ main{
     width: 320px;
     height: 160px;
     border-radius: 5px;
-    background: #040539b3;
+    background: #040539de;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,18 +78,11 @@ main{
 @keyframes falling {
 
     from{
-        transform: translateY(0);
+        transform: translate(0,0) rotate(-45deg);
     }
 
     to{
-        transform: translateY(1000px);
+        transform: translate(1300px,1300px) rotate(-45deg);
     }
 
-}
-#ray-1{
-    left: 50%;
-    top: -10px;
-    height: 5px;
-    animation-delay: 0s;
-    animation-duration: 10s;
 }
