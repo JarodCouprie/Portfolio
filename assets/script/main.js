@@ -11,7 +11,10 @@ class fallingItem{
     }
     addToPage(){
         let item = document.createElement("li");
+        let colorClassAray = ["pink","blue","green","red","purple"];
+        let randomColor = colorClassAray[Math.floor(Math.random()*colorClassAray.length)];
         item.classList.add("ray");
+        item.classList.add(randomColor);
         item.style.height = this.height+"px";
         item.style.top = "-"+this.height+"px";
         item.style.left = this.leftPosition+"%";

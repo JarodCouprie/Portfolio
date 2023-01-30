@@ -86,3 +86,23 @@ main{
     }
 
 }
+.pink{
+    background: #b47eb1;
+    box-shadow: 0px 0px 10px 1px #9b1094;
+}
+.blue{
+    background: #7e7fb4;
+    box-shadow: 0px 0px 10px 1px #0b0d7a;
+}
+.green{
+    background: #87b47e;
+    box-shadow: 0px 0px 10px 1px #21a706;
+}
+.red{
+    background: #b47e7e;
+    box-shadow: 0px 0px 10px 1px #880606;
+}
+.purple{
+    background: #9e7eb4;
+    box-shadow: 0px 0px 10px 1px #58098d;
+}
