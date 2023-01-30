@@ -1,8 +1,8 @@
-//Generating the falling items
+//Generating the rising items
 
 
 
-class fallingItem{
+class risingItem{
     constructor(height = 15,leftPosition,animationDuration = 15,animationDelay = 0){
         this.height = height;
         this.leftPosition = leftPosition;
@@ -16,7 +16,7 @@ class fallingItem{
         item.classList.add("ray");
         item.classList.add(randomColor);
         item.style.height = this.height+"px";
-        item.style.top = "-"+this.height+"px";
+        item.style.bottom = "-"+(this.height+10)+"px";
         item.style.left = this.leftPosition+"%";
         item.style.animationDuration = this.animationDuration+"s";
         item.style.animationDelay = this.animationDelay+"s";
@@ -33,11 +33,11 @@ function getRandomInt(min, max){
 
 function multipleObjects(numberOfObject){
     for (let i = 0; i<numberOfObject;i++){
-        let height = getRandomInt(2,200);
+        let height = getRandomInt(6,200);
         let leftPosition = getRandomInt(-100,100);
         let animationDuration = getRandomInt(5,30);
         let animationDelay = getRandomInt(0,10);
-        new fallingItem(height,leftPosition,animationDuration,animationDelay).addToPage();
+        new risingItem(height,leftPosition,animationDuration,animationDelay).addToPage();
     }
 }
 
