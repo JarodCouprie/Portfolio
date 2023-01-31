@@ -36,7 +36,7 @@ function multipleObjects(numberOfObject){
         let height = getRandomInt(6,200);
         let leftPosition = getRandomInt(-100,100);
         let animationDuration = getRandomInt(5,30);
-        let animationDelay = getRandomInt(0,10);
+        let animationDelay = getRandomInt(2,10);
         new risingItem(height,leftPosition,animationDuration,animationDelay).addToPage();
     }
 }

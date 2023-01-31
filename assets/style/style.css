@@ -19,6 +19,29 @@
     font-family: "ElMessiri";
     src: url(../font/ElMessiri-Regular.ttf);
 }
+#accueil{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    animation: fade 1s ease-in-out 1s forwards;
+    background: black;
+    color: #f1f1f1;
+    font-size: 7rem;
+    font-family: DancingScript;
+    display: grid;
+    place-items: center;
+}
+@keyframes fade {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
 main{
     min-height: 100vh;
     color: var(--light-color);
