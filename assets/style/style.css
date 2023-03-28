@@ -2,11 +2,12 @@
     --dark-color: #111;
     --light-color: #f1f1f1;
     --dark-gradient: linear-gradient(0deg, #040539ff, #050539ff, #060538ff, #070638ff, #080637ff, #080637ff, #090637ff, #0A0636ff, #0B0736ff, #0C0736ff, #0D0735ff, #0E0735ff, #0F0734ff, #100834ff, #110834ff, #110833ff, #120833ff, #130933ff, #140932ff, #150932ff, #160931ff, #170931ff, #180A31ff, #190A30ff, #1A0A30ff, #1A0A30ff, #1B0A2Fff, #1C0B2Fff, #1D0B2Eff, #1E0B2Eff);
+    --simple-gradient: linear-gradient(90deg, #15177f, #a7272b);
 }
 *{
     margin: 0;
     padding: 0;
-    outline: 0;
+    outline-style: transparent;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
@@ -18,33 +19,6 @@
 @font-face {
     font-family: "ElMessiri";
     src: url(../font/ElMessiri-Regular.ttf);
-}
-#accueil{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    animation: fade 1s ease-in-out forwards 2s;
-    background: #111;
-    color: #f1f1f1;
-    font-size: 7rem;
-    font-family: DancingScript;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-@keyframes fade {
-    from{
-        opacity: 1;
-        display: flex;
-    }
-    to{
-        opacity: 0;
-        display: none;
-    }
 }
 
 body{
@@ -76,47 +50,26 @@ main{
     box-shadow: 0px 0px 1px 0px #ffffff;
     z-index: 1;
 }
-#formation, #experience-pro, #work{
-    height: 60px;
-    width: 320px;
-    display: grid;
-    place-items: center;
-    font-family: ElMessiri;
-    letter-spacing: 1px;
-    font-size: 1.5rem;
-}
-#formation{
-    opacity: 0;
-    animation: appear 1s ease forwards 0.6s;
-
-}
-#experience-pro{
-    opacity: 0;
-    animation: appear 1s ease forwards 0.9s;
-
-}
-#work{
-    opacity: 0;
-    animation: appear 1s ease forwards 1.2s;
-
-}
 #nameTag{
-    width: 320px;
-    height: 160px;
+    width: 1000px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    animation: appear 1s ease forwards 0.3s;
+    animation: appear 1s ease forwards;
+    transition: all ease 0.3s;
 }
 #nameTag h1{
-    font-size: 3rem;
+    font-size: 6rem;
     font-family: DancingScript;
+    transition: all ease 0.3s;
 }
 #nameTag p{
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-family: ElMessiri;
+    transition: all ease 0.3s;
 }
 #container{
     position: absolute;
@@ -125,6 +78,22 @@ main{
     min-width: 100%;
     min-height: 100%;
     overflow: hidden;
+}
+
+@media (width<1000px) {
+    #nameTag{
+        width: 320px;
+        height: 160px;
+    }
+    #nameTag h1{
+        font-size: 3rem;
+    }
+    #nameTag p{
+        font-size: 1.5rem;
+    }
+    #related-content{
+        flex-direction: column;
+    }
 }
 
 .ray{
@@ -178,6 +147,34 @@ h2{
     font-size: 1.5rem;
 }
 
+.lower-card{
+    height: 60px;
+    width: 320px;
+    display: grid;
+    place-items: center;
+    font-family: ElMessiri;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+#formation{
+    opacity: 0;
+    animation: appear 1s ease forwards 0.5s;
+
+}
+#gallery{
+    opacity: 0;
+    animation: appear 1s ease forwards 0.75s;
+
+}
+#work{
+    opacity: 0;
+    animation: appear 1s ease forwards 1s;
+    background-color: #490963c0;
+}
 a{
     color: var(--light-color);
+}
+a:hover{
+    outline: solid 2px green;
+    transform: translate(5px, -5px) rotate(-2deg);
 }
