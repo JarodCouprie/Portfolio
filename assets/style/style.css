@@ -23,10 +23,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
     height: 100vh;
     width: 100%;
-    animation: fade 2s ease-in-out forwards;
+    animation: fade 1s ease-in-out forwards 2s;
     background: #111;
     color: #f1f1f1;
     font-size: 7rem;
@@ -40,42 +39,37 @@
 @keyframes fade {
     from{
         opacity: 1;
+        display: flex;
     }
     to{
         opacity: 0;
+        display: none;
     }
 }
-#loader{
-    height: 20px;
-    width: 40%;
-    background: white;
-    border-radius: 4px;
+
+body{
+    background: var(--dark-gradient);
 }
-#loarder-bar{
-    background: rgb(82, 7, 77);
-    width: 1%;
-    height: 100%;
-    border-radius: 2px;
-    animation: loading 2s linear;
-}
-@keyframes loading {
-    from{
-        width: 1%;
-    }
-    to{
-        width: 100%;
-    }
-}
+
 main{
     min-height: 100vh;
     color: var(--light-color);
-    background: var(--dark-gradient);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 .card{
     border-radius: 5px;
     background: #020338c7;
@@ -91,6 +85,21 @@ main{
     letter-spacing: 1px;
     font-size: 1.5rem;
 }
+#formation{
+    opacity: 0;
+    animation: appear 1s ease forwards 2s;
+
+}
+#experience-pro{
+    opacity: 0;
+    animation: appear 1s ease forwards 3s;
+
+}
+#work{
+    opacity: 0;
+    animation: appear 1s ease forwards 4s;
+
+}
 #nameTag{
     width: 320px;
     height: 160px;
@@ -98,6 +107,8 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: appear 1s ease forwards 1s;
 }
 #nameTag h1{
     font-size: 3rem;
@@ -118,13 +129,13 @@ main{
 
 .ray{
     position: absolute;
-    animation: falling 15s linear infinite;
+    animation: rising 15s linear infinite;
     width: 1px;
     height: 100px;
     border-radius: 1px;
     background: #f1f1f1;
 }
-@keyframes falling {
+@keyframes rising {
 
     from{
         transform: translate(0,0) rotate(45deg);
@@ -154,4 +165,19 @@ main{
 .purple{
     background: #9e7eb4;
     box-shadow: 0px 0px 10px 2px #58098d;
+}
+
+#related-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+a{
+    color: var(--light-color);
 }
