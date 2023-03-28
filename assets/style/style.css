@@ -87,17 +87,17 @@ main{
 }
 #formation{
     opacity: 0;
-    animation: appear 1s ease forwards 2s;
+    animation: appear 1s ease forwards 0.6s;
 
 }
 #experience-pro{
     opacity: 0;
-    animation: appear 1s ease forwards 3s;
+    animation: appear 1s ease forwards 0.9s;
 
 }
 #work{
     opacity: 0;
-    animation: appear 1s ease forwards 4s;
+    animation: appear 1s ease forwards 1.2s;
 
 }
 #nameTag{
@@ -108,7 +108,7 @@ main{
     justify-content: center;
     align-items: center;
     opacity: 0;
-    animation: appear 1s ease forwards 1s;
+    animation: appear 1s ease forwards 0.3s;
 }
 #nameTag h1{
     font-size: 3rem;
